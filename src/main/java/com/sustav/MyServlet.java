@@ -17,8 +17,8 @@ import java.io.IOException;
 public class MyServlet extends HttpServlet {
 
 //    @Alternative
-    @Inject
-    private Person person;
+//    @Inject
+//    private Person person;
 
     @Inject
     @PersonAnnotation
@@ -27,6 +27,9 @@ public class MyServlet extends HttpServlet {
     @Inject
     @WorkerAnnotation
     private Person worker;
+
+    @Inject
+    private int i;
 
 //    @Inject
 //    public MyServlet(final Student student) {
@@ -40,8 +43,8 @@ public class MyServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().write(student.sayWho());
+        resp.getWriter().write(student.sayWho() + " " + i);
         resp.getWriter().write(worker.sayWho());
-        resp.getWriter().write(person.sayWho());
+//        resp.getWriter().write(person.sayWho());
     }
 }
