@@ -1,5 +1,6 @@
 package com.sustav;
 
+import javax.enterprise.inject.Alternative;
 import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +15,10 @@ import java.io.IOException;
  */
 @WebServlet(value = "/di")
 public class MyServlet extends HttpServlet {
+
+//    @Alternative
+    @Inject
+    private Person person;
 
     @Inject
     @PersonAnnotation
@@ -37,5 +42,6 @@ public class MyServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().write(student.sayWho());
         resp.getWriter().write(worker.sayWho());
+        resp.getWriter().write(person.sayWho());
     }
 }

@@ -1,10 +1,13 @@
 package com.sustav;
 
+import javax.enterprise.inject.Alternative;
+
 /**
  * @author Anton Sustavov
  * @since 2019/07/30
  */
 @PersonAnnotation
+@Alternative
 public class Student implements Person {
     private String name;
     private int age;
