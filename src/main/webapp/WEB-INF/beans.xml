@@ -13,4 +13,8 @@
         <class>com.sustav.interceptor.InterceptorOne</class>
         <class>com.sustav.interceptor.InterceptorTwo</class>
     </interceptors>
+
+    <decorators>
+        <class>com.sustav.decorator.Decor</class>
+    </decorators>
 </beans>
