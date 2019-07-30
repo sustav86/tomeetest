@@ -1,7 +1,11 @@
 package com.sustav.producer;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import javax.enterprise.inject.Disposes;
 import javax.enterprise.inject.Produces;
+import javax.inject.Inject;
 
 import com.sustav.entity.Car;
 

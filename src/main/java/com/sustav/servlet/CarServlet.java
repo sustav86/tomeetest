@@ -1,6 +1,8 @@
 package com.sustav.servlet;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.inject.Inject;
 import javax.servlet.ServletException;
@@ -24,8 +26,12 @@ public class CarServlet extends HttpServlet {
     @Inject
     private Car car;
 
+    @Inject
+    private Logger logger;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().write(car.getName());
+        logger.log(Level.ALL, "get logger class");
     }
 }
