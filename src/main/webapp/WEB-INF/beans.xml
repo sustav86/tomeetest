@@ -9,4 +9,8 @@
     <alternatives>
         <class>com.sustav.entity.Student</class>
     </alternatives>
+    <interceptors>
+        <class>com.sustav.interceptor.InterceptorOne</class>
+        <class>com.sustav.interceptor.InterceptorTwo</class>
+    </interceptors>
 </beans>

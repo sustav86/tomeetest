@@ -1,8 +1,7 @@
 package com.sustav.interceptor;
 
-import javax.interceptor.Interceptors;
-
-@Interceptors({InterceptorOne.class, InterceptorTwo.class})
+//@Interceptors({InterceptorOne.class, InterceptorTwo.class})
+@InterceptorBind
 public class InterceptorService {
 
     public void doJob() {
