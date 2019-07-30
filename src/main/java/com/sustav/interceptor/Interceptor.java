@@ -1,29 +1,23 @@
-package com.sustav.bean;
+package com.sustav.interceptor;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import javax.enterprise.context.RequestScoped;
+import javax.interceptor.AroundConstruct;
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.InvocationContext;
 
-@RequestScoped
-public class LiveCircleBean {
+public class Interceptor {
+    @AroundConstruct
+    public Object aroundConstruct(InvocationContext invocationContext) throws Exception {
+        System.out.println(invocationContext.getMethod() + " invoke around");
 
-    public LiveCircleBean() {
-        System.out.println(getClass().getName() + " constructor");
-    }
-
-    public void job1() {
-        System.out.println("Job 1");
-    }
-
-    public void job2() {
-        System.out.println("Job 2");
+        return invocationContext.proceed();
     }
 
     @PostConstruct
-    public void postConstruct() {
-        System.out.println(getClass().getName() + " post construct");
+    public void postConstruction(InvocationContext invocationContext) throws Exception {
+        System.out.println(invocationContext.getMethod() + " post construct");
+        invocationContext.proceed();
     }
 
     @AroundInvoke
@@ -37,4 +31,5 @@ public class LiveCircleBean {
     public void preDestroy() {
         System.out.println(getClass().getName() + " destroyed");
     }
+
 }
