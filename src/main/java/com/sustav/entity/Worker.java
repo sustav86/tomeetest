@@ -1,4 +1,4 @@
-package com.sustav;
+package com.sustav.entity;
 
 /**
  * @author Anton Sustavov

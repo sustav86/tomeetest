@@ -1,4 +1,4 @@
-package com.sustav;
+package com.sustav.entity;
 
 import javax.inject.Qualifier;
 import java.lang.annotation.ElementType;

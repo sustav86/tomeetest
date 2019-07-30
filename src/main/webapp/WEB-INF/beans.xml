@@ -7,6 +7,6 @@
         bean-discovery-mode="all">
 
     <alternatives>
-        <class>com.sustav.Student</class>
+        <class>com.sustav.entity.Student</class>
     </alternatives>
 </beans>

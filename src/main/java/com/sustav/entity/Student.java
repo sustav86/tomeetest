@@ -1,4 +1,4 @@
-package com.sustav;
+package com.sustav.entity;
 
 import javax.enterprise.inject.Alternative;
 
