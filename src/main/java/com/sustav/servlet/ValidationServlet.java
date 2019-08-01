@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.validation.Validation;
+import javax.validation.Validator;
 
 import com.sustav.entity.User;
 
@@ -20,7 +20,7 @@ import com.sustav.entity.User;
 public class ValidationServlet extends HttpServlet {
 
     @Inject
-    private Validation validation;
+    private Validator validator;
     @Inject
     private User user;
 

@@ -8,6 +8,8 @@ public class User {
     @Pattern(regexp = "[A-Z]")
     private String name;
     private int age;
+    @CheckSiteUrl
+    private String site;
 
     public String getName() {
         return name;
@@ -23,5 +25,13 @@ public class User {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getSite() {
+        return site;
+    }
+
+    public void setSite(String site) {
+        this.site = site;
     }
 }
