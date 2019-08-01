@@ -5,13 +5,15 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.Scanner;
 
-import javax.ejb.AccessTimeout;
+import javax.ejb.ConcurrencyManagement;
+import javax.ejb.ConcurrencyManagementType;
 import javax.ejb.Lock;
 import javax.ejb.LockType;
 import javax.ejb.Singleton;
 
 @Singleton
-@AccessTimeout(20)
+//@AccessTimeout(20)
+@ConcurrencyManagement(ConcurrencyManagementType.BEAN)
 public class EjbConcurrent {
     private int i;
 
@@ -25,7 +27,8 @@ public class EjbConcurrent {
         return  this.i = i;
     }
 
-    public int increate() {
+    @Lock(LockType.WRITE)
+    public synchronized int increase() {
         return ++i;
     }
 

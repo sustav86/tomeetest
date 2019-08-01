@@ -20,6 +20,6 @@ public class EjbConcurrentServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        resp.getWriter().write(ejbConcurrent.setI(ejbConcurrent.getI() + 1) + " ");
-        resp.getWriter().write(ejbConcurrent.increate() + " ");
+        resp.getWriter().write(ejbConcurrent.increase() + " ");
     }
 }
