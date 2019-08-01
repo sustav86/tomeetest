@@ -14,7 +14,7 @@ import javax.validation.Validator;
 
 import com.sustav.entity.User;
 
-@WebServlet(value = "/cuva")
+@WebServlet(value = "/cuvac")
 public class CustomValidServlet extends HttpServlet {
 
     @Inject
