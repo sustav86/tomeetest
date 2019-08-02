@@ -16,5 +16,6 @@ public class JtaBeanPersist {
 
     public void saveStudent() {
         entityManager.persist(new Student("Max", 23));
+
     }
 }
